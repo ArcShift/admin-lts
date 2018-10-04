@@ -29,7 +29,6 @@
 	  <ul class="nav navbar-nav">
 	    <!--Begin test-->
 
-
 	    <!-- User Account: style can be found in dropdown.less -->
 	    <li class="dropdown user user-menu">
 	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -105,6 +104,21 @@
 	<!-- sidebar menu: : style can be found in sidebar.less -->
 	<ul class="sidebar-menu" data-widget="tree">
 	  <li class="header">MAIN NAVIGATION</li>
+	  <li>
+	    <a href="<?php echo site_url(); ?>">
+	      <i class="fa fa-home"></i> <span>Beranda</span>
+	    </a>
+	  </li>
+	  <li>
+	    <a href="<?php echo site_url(); ?>/kamus">
+	      <i class="fa fa-book"></i> <span>Kamus</span>
+	    </a>
+	  </li>
+	  <li>
+	    <a href="<?php echo site_url(); ?>/chat">
+	      <i class="fa fa-wechat"></i> <span>Chat</span>
+	    </a>
+	  </li>
 	  <li class="active treeview">
 	    <a href="#">
 	      <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -278,7 +292,7 @@
       <!-- /.sidebar -->
     </aside>
     <!--END SIDEBAR-->
-    
+
     <!--STYLE SCRIPT-->
     <script src="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/jquery-ui/jquery-ui.min.js"></script>
@@ -317,10 +331,12 @@
     <!--DATA TABLE-->
     <script src="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    
+
     <div class="content-wrapper">
-      <!--CONTENT HERE-->
-      <?php $this->load->view($content); ?>
+      <section class="content">
+	<!--CONTENT HERE-->
+	<?php $this->load->view($content); ?>
+      </section>
     </div>
   </body>
 </html>

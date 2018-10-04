@@ -26,7 +26,6 @@
 	url: "kamus/cari/" + $("#kata").val(),
 	dataType: 'json',
 	success: function (result) {
-//	$("#div1").html(result);
 	  console.log(result)
 	  if (typeof table !== 'undefined') {
 	    table.destroy();
@@ -41,20 +40,4 @@
       });
     });
   });
-
-//  $(function () {
-//    $('#tbl').DataTable();
-//  });
-//  $(function () {
-//    $('#tbl').DataTable()
-////    $('#example2').DataTable({
-////      'paging'      : true,
-////      'lengthChange': false,
-////      'searching'   : false,
-////      'ordering'    : true,
-////      'info'        : true,
-////      'autoWidth'   : false
-////    })
-////  })
 </script>
-

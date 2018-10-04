@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends CI_Controller {
+class Beranda extends CI_Controller {
 
   public function index() {
 //    echo site_url();
@@ -9,7 +9,7 @@ class Dashboard extends CI_Controller {
 //    $this->load->view('admin-container');
 //    $content=$this->load->view('cari_kata');
   
-    $this->load->view('container',array('content'=>'cari_kata'));
+    $this->load->view('container',array('content'=>'beranda_view'));
   }
 
 }

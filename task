@@ -1,5 +1,5 @@
 # can't load font awesome & ionicon from local (Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource)
 ^+ set base url
 
--put array to data table
-
++put array to data table
+-jquery clone element
