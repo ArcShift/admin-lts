@@ -1,10 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-header("Access-Control-Allow-Methods: GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Content-Length, Accept-Encoding");
-if ( "OPTIONS" === $_SERVER['REQUEST_METHOD'] ) {
-    die();
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,19 +9,15 @@ if ( "OPTIONS" === $_SERVER['REQUEST_METHOD'] ) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
-<!--    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.1/css/ionicons.min.css" />-->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/dist/css/skins/_all-skins.min.css">
-
-
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/morris.js/morris.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/jvectormap/jquery-jvectormap.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <!--<link rel="stylesheet" href="<?php // echo base_url(); ?>/asset/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">-->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -1220,11 +1211,8 @@ if ( "OPTIONS" === $_SERVER['REQUEST_METHOD'] ) {
     </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery 3 -->
     <script src="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
     <script src="<?php echo base_url(); ?>/asset/AdminLTE/bower_components/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
       $.widget.bridge('uibutton', $.ui.button);
     </script>

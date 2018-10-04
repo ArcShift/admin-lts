@@ -6,7 +6,10 @@ class Dashboard extends CI_Controller {
 //    echo site_url();
 //    echo '<br/>';
 //    echo base_url();
-    $this->load->view('admin-container');
+//    $this->load->view('admin-container');
+//    $content=$this->load->view('cari_kata');
+  
+    $this->load->view('container',array('content'=>'cari_kata'));
   }
 
 }
