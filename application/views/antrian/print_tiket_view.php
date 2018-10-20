@@ -40,17 +40,34 @@
 		</div>
 	    </div>
 	</div>
+	<!--MODAL-->
+	<div class="modal modal-primary fade" id="modal-primary">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Mohon Tunggu Sebentar</h4>
+              </div>
+              <div class="modal-body">
+                <p>Sedang mencetak nomor antrian anda&hellip;</p>
+              </div>
+              <div class="modal-footer">
+		  <p class="pull-left">[Footer]</p>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
 	<script>
 	    $(document).ready(function () {
 		var noAntri = 1;
 		$("#cetak").click(function () {
 		    console.log('mencetak');
-		    $("#cetak").hide();
-		    $("#noAntri").text('Mencetak');
+		    $("#modal-primary").modal("show");
 		    setTimeout(function () {
 			noAntri++;
 			$("#noAntri").text(('0000' + noAntri).slice(-4));
-			$("#cetak").show();
+			$("#modal-primary").modal("hide");
 		    }, 3000);
 		});
 	    });
