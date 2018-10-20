@@ -81,25 +81,27 @@
   </div>
   <!-- /.box-footer-->
 </div>
-<?php echo $_SERVER['REMOTE_ADDR'];?>
+
 <script>
   $(document).ready(function () {
     $('#form-write-message').on('submit', function (e) {
       e.preventDefault();//no refresh
-      console.log('submit');
-      $(".direct-chat-msg:last-child").clone(true).appendTo(".direct-chat-messages");
-      $.ajax({
-	type: 'POST',
-	url: "chat/send/" + $("#input-write-message").val(),
-	dataType: 'json',
-	success: function (result) {
-	  console.log(result);
-//	  $(".direct-chat-msg").clone().appendTo(".box-body");
-	  
-	  
-//	  direct-chat-msg right
-	}
-      });
+      if ($("#input-write-message").val().length == 0) {//message empty
+	console.log('write a message');
+      } else {//message contained
+	$.ajax({
+	  type: 'POST',
+	  url: "chat/send/" + $("#input-write-message").val(),
+	  dataType: 'text',
+	  success: function (result) {
+	    console.log(result);
+	    $(".direct-chat-msg:last-child").clone(true).appendTo(".direct-chat-messages");
+	    $(".direct-chat-msg:last-child").children().text('text here');
+	  }
+	});
+      }
+
+
     });
   });
 </script>
