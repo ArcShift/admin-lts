@@ -18,20 +18,16 @@
     <body>
 	<div class="content">
 	    <div class="row">
-		<div id="antrian" class="col-xs-6 kiri">
-		    <div class="small-box bg-gray antri">
-			<div class="inner text-center">
-			    <h4><b>No Antrian</b></h4>
-			    <h3>0000</h3>
-			</div>
-		    </div>
+		<div class="col-lg-2 col-sm-1">
+
 		</div>
-		<div  class="col-xs-6 kiri ">
-		    <div class="small-box bg-aqua invisible">
+		<div class="col-lg-8 col-sm-10">
+		    <div class="small-box bg-gray">
 			<div class="inner text-center">
-			    <h4><b>.</b></h4>
-			    <h3>.<br/>.</h3>
-			    <h4><b>.</b></h4>
+			    <b>Selamat Datang di<br/>[Nama Instansi]</b>
+			    <h4><b>No Antrian</b></h4>
+			    <h3 id="noAntri">0001</h3>
+			    <b>[footer]</b>
 			</div>
 		    </div>
 		    <div class="small-box bg-aqua-gradient">
@@ -46,8 +42,16 @@
 	</div>
 	<script>
 	    $(document).ready(function () {
-		$("#cetak").click(function(){
-		    console.log('Print tiket');
+		var noAntri = 1;
+		$("#cetak").click(function () {
+		    console.log('mencetak');
+		    $("#cetak").hide();
+		    $("#noAntri").text('Mencetak');
+		    setTimeout(function () {
+			noAntri++;
+			$("#noAntri").text(('0000' + noAntri).slice(-4));
+			$("#cetak").show();
+		    }, 3000);
 		});
 	    });
 	</script>
