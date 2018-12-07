@@ -35,9 +35,9 @@ class Word extends CI_Controller {
     public function read() {
 //        $source = base_url('asset/document/').'Test.docx';
         $source = 'D:\xampp\htdocs\admin-lte\asset\document\ABCDEF.docx';
-        echo date('H:i:s'), " Reading contents from `{$source}`", PHP_EOL;
+//        echo date('H:i:s'), " Reading contents from `{$source}`", PHP_EOL;
         $phpWord = new \PhpOffice\PhpWord\PhpWord();
-        $phpWord = \PhpOffice\PhpWord\IOFactory::load($source);
+//        $phpWord = \PhpOffice\PhpWord\IOFactory::load($source);
 //        print_r($phpWord);
 //        $inputFileType = \PhpOffice\PhpWord\PHPWord_IOFactory::identify($source);
 //        echo
@@ -45,10 +45,22 @@ class Word extends CI_Controller {
 // read source
         if ($phpWordReader->canRead($source)) {
             $phpWord = $phpWordReader->load($source);
-            $arrWord=(array)$phpWord;
-            foreach ($arrWord as $value) {
-                echo '<br/>================<br/>';
-                print_r($value);
+            $phpWord=(array)$phpWord;
+            $phpWord= array_values($phpWord);
+            $phpWord=$phpWord[0][0];
+            $phpWord=(array)$phpWord;
+//                echo '<br/>================<br/>';
+            print_r($phpWord);
+//            echo sizeof($arrWord);
+//            print_r($arrWord['PhpOffice\\PhpWord\\PhpWordsections']);
+            foreach ($phpWord as $value) {
+//                echo '<br/>================<br/>';
+//                foreach ($value as $value2) {
+//                echo '<br/>================++++++=<br/>';
+//                print_r($value);
+//                    
+//                }
+//                
             }
         }
     }
